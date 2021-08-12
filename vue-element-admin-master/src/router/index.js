@@ -90,7 +90,17 @@ export const asyncRoutes = [
     meta: {
       title: '图书管理',
       icon: 'documentation'
-    }
+    },
+    children: [
+      {
+        path: '/book/create',
+        component: () => import('@/views/book/create'),
+        meta: {
+          title: '上传图书',
+          icon: 'edit'
+        }
+      }
+    ]
   },
   { path: '*', redirect: '/404', hidden: true }
 ]
